@@ -1,7 +1,8 @@
 {
   "Image": "quay.io/skyport/java:21",
   "AltImages": [
-    "quay.io/skyport/java:21"
+    "quay.io/skyport/java:21",
+    "privt/java:18"
   ],
   "Cmd": "",
   "Env": [
