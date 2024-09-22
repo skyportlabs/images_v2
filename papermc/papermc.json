@@ -1,1 +1,45 @@
-{"Image":"quay.io/skyport/java:21","Cmd":"","Env":["START=java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar"],"features":["eula"],"Scripts":{"Install":[{"Uri":"https://papermc.io/api/v2/projects/paper/versions/1.21/builds/119/downloads/paper-1.21-119.jar","Path":"server.jar"},{"Uri":"https://raw.githubusercontent.com/skyportlabs/images_v2/main/spigotmc/server.properties","Path":"server.properties"}]},"Name":"Minecraft Java: PaperMC","Description":"PaperMC is an optimized, high-performance fork of SpigotMC for Minecraft servers. It aims to improve performance and stability by offering additional features, enhanced configuration options, and bug fixes. Known for its robust plugin compatibility and active development community, PaperMC is a preferred choice for server administrators looking to enhance their Minecraft multiplayer experience.","Author":"info@skyport.dev","AuthorName":"Skyport Labs","Meta":{"Version":"Skyport Images v2"}}
+{
+"Image": "quay.io/skyport/java:21",
+  "AltImages": [
+    "quay.io/skyport/java:21",
+    "docker.io/privt/java:18",
+    "docker.io/privt/java:17"
+  ],
+  "Cmd": "",
+  "Env": [
+    "START=java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar"
+  ],
+  "StopCommand": "stop",
+  "features":["eula"],
+  "Scripts": {
+    "Install": [
+      {
+        "Uri": "https://api.papermc.io/v2/projects/paper/versions/{{Version}}/builds/{{Build}}/downloads/paper-{{Version}}-{{Build}}.jar",
+        "Path": "server.jar"
+      },
+      {
+        "Uri": "https://raw.githubusercontent.com/skyportlabs/images_v2/main/spigotmc/server.properties",
+        "Path": "server.properties"
+      }
+    ]
+  },
+  "Variables": {
+    "Version": {
+      "type": "text",
+      "default": "1.21.1",
+      "required": true
+    },
+    "Build": {
+      "type": "text",
+      "default": "89",
+      "required": true
+    }
+  },
+  "Name": "Minecraft Java: PaperMC",
+  "Description": "PaperMC is an optimized, high-performance fork of SpigotMC for Minecraft servers. It aims to improve performance and stability by offering additional features, enhanced configuration options, and bug fixes. Known for its robust plugin compatibility and active development community, PaperMC is a preferred choice for server administrators looking to enhance their Minecraft multiplayer experience.",
+  "Author": "info@skyport.dev",
+  "AuthorName": "Skyport Labs",
+  "Meta": {
+    "Version": "Skyport Images v2"
+  }
+}
