@@ -1,0 +1,1 @@
+{"Image":"quay.io/skyport/java:21","Cmd":"","Env":["START=bash"],"features":["eula"],"Scripts":{"Install":[{"Uri":"","Path":""},{"Uri":"","Path":""}]},"Name":"AIO Image","Description":"A Best Aio Image Which runs bash terminal on panel.","Author":"HydrenLLC","AuthorName":"HydrenLL","Meta":{"Version":"Skyport Images v2"}}
